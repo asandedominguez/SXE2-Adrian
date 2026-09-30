@@ -62,6 +62,10 @@ Entramos en los contenedores de nuevo con attach. Salimos con exit. Si ahora hac
 
 ![11](/Capturas/11.png)
 
+Usamos "ps -a" para ver los inactivos
+
+![12](/Capturas/15.png)
+
 ## 8. ¿Cuánto disco has ocupado? Distingue imágenes de contenedores.
 
 Como vemos en la foto, las imagenes ocupan 169.5MB, y los contenedores 1.169KB.
