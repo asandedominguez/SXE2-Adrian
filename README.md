@@ -14,9 +14,9 @@ Con "create" (como indica su nombre) crearemos el contenedor. Este no tendrá no
 
 ![2](/Capturas/2.png)
 
-Para ver el estado en el que quedó este contenedor ejecutamos la orden "docker ps -a". Su función es listar los contenedores del sistema, incluso los inactivos. Muestra una serie de información, en la que se encuentra "STATUS", que indica que este está en estado "CREATED", esto quiere decir que no se esta ejecutando, simplemente existe y se puede activar en cualquier momento.
+Para ver el estado en el que quedó este contenedor ejecutamos la orden "docker ps -a". Su función es listar los contenedores del sistema, incluso los inactivos. Muestra una serie de información, en la que se encuentra "STATUS", que indica que este está en estado "Created", esto quiere decir que no se esta ejecutando, simplemente existe y se puede activar en cualquier momento.
 
-Se le a asignado un nombre random, el que se ve en el apartado "names"
+Se le a asignado un nombre random, el que se ve en el apartado "NAMES"
 
 ![3](/Capturas/4.png)
 
