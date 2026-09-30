@@ -4,6 +4,8 @@
 
 Para esto utiliamos la orden "pull", que sirve simplemente para descargar una imagen, sin crear ni ejecutar un contenedor. Elegí la versión 3.19 de Alpine.
 
+Para ver que se creó correctamente realice un "image ls" (el nombre es bastante descriptivo)
+
 ![1](/Capturas/1.png)
 
 ## 2. Crea un contenedor sin nombre y sin arrancarlo. ¿En qué estado queda? ¿Qué nombre le ha puesto Docker?
