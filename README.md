@@ -4,6 +4,8 @@
 
 Para esto utiliamos la orden "pull", que sirve simplemente para descargar una imagen, sin crear ni ejecutar un contenedor. Elegí la versión 3.19 de Alpine.
 
+Para ver que se creó correctamente realice un "image ls" (el nombre es bastante descriptivo)
+
 ![1](/Capturas/1.png)
 
 ## 2. Crea un contenedor sin nombre y sin arrancarlo. ¿En qué estado queda? ¿Qué nombre le ha puesto Docker?
@@ -12,9 +14,9 @@ Con "create" (como indica su nombre) crearemos el contenedor. Este no tendrá no
 
 ![2](/Capturas/2.png)
 
-Para ver el estado en el que quedó este contenedor ejecutamos la orden "docker ps -a". Su función es listar los contenedores del sistema, incluso los inactivos. Muestra una serie de información, en la que encuentra "STATUS", que indica que este está en estado "CREATED", esto quiere decir que no se esta ejecutando, simplemente existe y se puede activar en cualquier momento.
+Para ver el estado en el que quedó este contenedor ejecutamos la orden "docker ps -a". Su función es listar los contenedores del sistema, incluso los inactivos. Muestra una serie de información, en la que se encuentra "STATUS", que indica que este está en estado "Created", esto quiere decir que no se esta ejecutando, simplemente existe y se puede activar en cualquier momento.
 
-Se le a asignado un nombre random, el que se ve en el apartado "names"
+Se le a asignado un nombre random, el que se ve en el apartado "NAMES"
 
 ![3](/Capturas/4.png)
 
@@ -28,13 +30,13 @@ Con todas estas opciones, y como vemos en la imagen ya tendremos el contenedor c
 
 ## 4. Desde dentro, mira qué IP tiene y si puede hacer ping a google.com.
 
-Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Puede hacer sin problema el ping.
+Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Puede hacer sin problema el ping. La otra ip que aparece (127...) es la ip local del contenedor, esta no tiene ninguna salida, por lo que tenemos que utilizar la otra que es pública
 
 ![5](/Capturas/5.png)
 
 ## 5. Deja dam_alp1 funcionando sin pararlo y crea dam_alp2 igual. Con los dos en marcha, haz ping de uno a otro: por IP y por nombre. Explica cada resultado.
 
-Vemos con "ps" que a pesar de haber salidop de la shell el contenedor sigue activo.
+Vemos con "ps" que a pesar de haber salido de la shell el contenedor sigue activo.
 
 ![6](/Capturas/6.png)
 
