@@ -2,17 +2,17 @@
 
 ## 1. Descarga la imagen de Alpine sin arrancarla y comprueba que la tienes. Fija la versión: no uses latest. Escoge una versión, de las disponibles en docker hub.
 
-Para esto utiliamos la orden pull, que sirve simplemente para descargar una imagen, sin crear ni ejecutar un contenedor. Elegí la versión 3.19 de Alpine.
+Para esto utiliamos la orden "pull", que sirve simplemente para descargar una imagen, sin crear ni ejecutar un contenedor. Elegí la versión 3.19 de Alpine.
 
 ![1](/Capturas/1.png)
 
 ## 2. Crea un contenedor sin nombre y sin arrancarlo. ¿En qué estado queda? ¿Qué nombre le ha puesto Docker?
 
-Con create crearemos un contenedor. Este no tendrá nombre ya que no le establecimos ninguno, y se creará a partir de la imagen indicada.
+Con "create" (como indica su nombre) crearemos el contenedor. Este no tendrá nombre ya que no le establecimos ninguno con la orden "--name". Se creará a partir de la imagen indicada.
 
 ![2](/Capturas/2.png)
 
-Para ver el estado en el que quedó este contenedor ejecutamos la orden docker ps -a. Su función es listar los contenedores del sistema. Muestra una serie de información, en la que encuentra "STATUS", que indica que está "CREATED", esto quiere decir que no se esta ejecutando, simplemente existe y se puede activar en cualquier momento.
+Para ver el estado en el que quedó este contenedor ejecutamos la orden "docker ps -a". Su función es listar los contenedores del sistema, incluso los inactivos. Muestra una serie de información, en la que encuentra "STATUS", que indica que este está en estado "CREATED", esto quiere decir que no se esta ejecutando, simplemente existe y se puede activar en cualquier momento.
 
 Se le a asignado un nombre random, el que se ve en el apartado "names"
 
@@ -20,28 +20,29 @@ Se le a asignado un nombre random, el que se ve en el apartado "names"
 
 ## 3. Crea y arranca dam_alp1 con una shell. ¿Qué opciones necesitas para poder escribir dentro?
 
-Parta ello ejecutamos la orden "run" que en una sola línea creara y arrancará el contenedor. Le añadimos "-it" para activar el modo de escritura. "--name" para añadir el nombre. "/bin/bash" para establecer el tipo de shell con la que queremos trabajar.
+Para ello ejecutamos la orden "run" que en una sola línea creara y arrancará el contenedor. Le añadimos "-it" para activar el modo de escritura. "--name" para añadir el nombre. "/bin/bash" para establecer el tipo de shell con la que queremos trabajar.
+
 Con todas estas opciones, y como vemos en la imagen ya tendremos el contenedor creado, en ejecución, y con la shell operativa para trabajar en el.
 
 ![4](/Capturas/3.png)
 
 ## 4. Desde dentro, mira qué IP tiene y si puede hacer ping a google.com.
 
-Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Puede hacer sin problema el ping
+Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Puede hacer sin problema el ping.
 
 ![5](/Capturas/5.png)
 
 ## 5. Deja dam_alp1 funcionando sin pararlo y crea dam_alp2 igual. Con los dos en marcha, haz ping de uno a otro: por IP y por nombre. Explica cada resultado.
 
-Vemos con "ps" que a pesar de haber salidop de la shell el contenedor sigue activo
+Vemos con "ps" que a pesar de haber salidop de la shell el contenedor sigue activo.
 
 ![6](/Capturas/6.png)
 
-Creamos e iniciamos el contenedor y hacemos ping mediante la ip y lo hace sin problemas
+Creamos e iniciamos el contenedor y hacemos ping mediante la ip y lo hace sin problemas.
 
 ![7](/Capturas/7.png)
 
-Sin embargo lo hacemos con el nombre y da un error. Los 2 contenedores estan conectados a la red de Docker, pero este tiene el DNS desconectado ya que no lo configuramos, y por tanto no tiene la capacidad para resolver nombres y da error.
+Sin embargo lo hacemos con el nombre y da un error. Los 2 contenedores estan conectados a la red de Docker, pero esta tiene el DNS desconectado ya que no lo configuramos, y por tanto no tiene la capacidad para resolver nombres y da error.
 
 ![8](/Capturas/8.png)
 
