@@ -36,7 +36,7 @@ Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Pue
 
 ## 5. Deja dam_alp1 funcionando sin pararlo y crea dam_alp2 igual. Con los dos en marcha, haz ping de uno a otro: por IP y por nombre. Explica cada resultado.
 
-Vemos con "ps" que a pesar de haber salidop de la shell el contenedor sigue activo.
+Vemos con "ps" que a pesar de haber salido de la shell el contenedor sigue activo.
 
 ![6](/Capturas/6.png)
 
