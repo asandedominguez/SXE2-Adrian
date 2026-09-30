@@ -30,7 +30,7 @@ Con todas estas opciones, y como vemos en la imagen ya tendremos el contenedor c
 
 ## 4. Desde dentro, mira qué IP tiene y si puede hacer ping a google.com.
 
-Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Puede hacer sin problema el ping.
+Lanzamos el comando "ip a", y vemos que la ip establecida es las 172.17.0.2. Puede hacer sin problema el ping. La otra ip que aparece (127...) es la ip local del contenedor, esta no tiene ninguna salida, por lo que tenemos que utilizar la otra que es pública
 
 ![5](/Capturas/5.png)
 
